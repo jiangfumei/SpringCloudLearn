@@ -10,7 +10,6 @@
 
 	<!-- 父pom.xml中的必须为pom类型 -->
 	<packaging>pom</packaging>
-
 	<groupId>com.spring</groupId>
 	<artifactId>cloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
