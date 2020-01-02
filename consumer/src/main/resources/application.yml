@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: springcloud-ribbon-client
+
+server:
+  port: 5990
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9990/eureka/
+  instance:
+    prefer-ip-address: true
