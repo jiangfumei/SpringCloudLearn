@@ -2,6 +2,7 @@
 spring:
   application:
     name: springcloud-eureka-client
+
 server:
   port: 8990
 
