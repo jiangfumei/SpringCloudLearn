@@ -16,15 +16,14 @@ spring:
           password: jfm19961106
           clone-on-start: true #开启启动时直接从git获取配置
           default-label: master
-      name:
-      profile:
-      label:
 
 server:
   port: 7990
 
 eureka:
   client:
+    register-with-eureka: true  #注册到Eureka的注册中心
+    fetch-registry: true  #获取注册实例列表
     serviceUrl:
       defaultZone: http://localhost:9990/eureka/
   instance:
