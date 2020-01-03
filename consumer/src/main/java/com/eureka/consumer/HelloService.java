@@ -10,7 +10,7 @@ public class HelloService {
     RestTemplate restTemplate;
 
     public String hiService(String name) {
-        return restTemplate.getForObject("http://SPRINGCLOUD-EUREKA-CLIENT/hi?name="+name,String.class);
+        return restTemplate.getForObject("http://springcloud-eureka-client/hi?name="+name,String.class);
     }
 
 }
