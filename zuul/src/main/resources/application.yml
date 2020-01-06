@@ -5,7 +5,8 @@ server:
   port: 4999
 eureka:
   client:
-    service-url: http://localhost:9990/eureka/
+    service-url:
+      defaultZone: http://localhost:9990/eureka/
   instance:
     prefer-ip-address: true
 
