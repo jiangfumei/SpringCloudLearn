@@ -11,14 +11,15 @@ spring:
       server:
         git:
           uri: https://github.com/jiangfumei/cloud
-          search-paths: /api/**   #表示只要访问以/api/开头的多层目录都可以路由到 id为client的服务上
-          username: jiangfumei
+          #search-paths: /api/**   #表示只要访问以/api/开头的多层目录都可以路由到 id为client的服务上
+          search-paths: respo
+          username: jiangfumei    #如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写，本例子是公开仓库，放心使用。
           password: jfm19961106
           clone-on-start: true #开启启动时直接从git获取配置
           default-label: master
 
 server:
-  port: 7990
+  port: 3990
 
 eureka:
   client:

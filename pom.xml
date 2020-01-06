@@ -78,7 +78,7 @@
 	<modules>
 		<module>server</module>      <!-- eureka服务注册发现中心 -->
 		<module>client</module> 	 <!-- 微服务的网关服务 提供者 -->
-		<module>config</module>   	 <!-- 微服务的配置中心模块 -->
+		<module>config</module>   	 <!-- 微服务的配置中心模块config-server -->
 		<module>consumer</module>	 <!--ribbon消费者 -->
 		<module>feign</module>		 <!--feign消费者-->
 	</modules>
