@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: springcloud-consumer-ribbon
+    name: consumer-ribbon
 
 server:
   port: 5990

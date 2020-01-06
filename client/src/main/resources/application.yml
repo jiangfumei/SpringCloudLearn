@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: springcloud-eureka-client
+    name: eureka-client
 
 server:
   port: 8990
@@ -13,14 +13,14 @@ eureka:
   instance:
     prefer-ip-address: true
 
-zuul:
-  routes:
-    feign-auth:
-      path: /auth/**
-      serviceId: crawler-auth
-      strip-prefix: true
-      custom-sensitive-headers: true
-    feign-user:
-      path: /user/**
-      serviceId: crawler-goddess
-      sensitiveHeaders:
+#zuul:
+  #routes:
+    #feign-auth:
+      #path: /auth/**
+      #serviceId: crawler-auth
+      #strip-prefix: true
+      #custom-sensitive-headers: true
+    #feign-user:
+      #path: /user/**
+      #serviceId: crawler-goddess
+      #sensitiveHeaders:
