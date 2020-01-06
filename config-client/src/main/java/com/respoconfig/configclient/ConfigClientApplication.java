@@ -3,6 +3,7 @@ package com.respoconfig.configclient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,8 +17,9 @@ public class ConfigClientApplication {
 
     @Value("${foo}")
     String foo;
+
     @RequestMapping(value = "/hi")
-    public String getFoo(){
+    public String hi(){
         return foo;
     }
 

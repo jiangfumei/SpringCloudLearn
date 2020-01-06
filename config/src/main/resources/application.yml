@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: springcloud-config-server
+    name: config-server
   #profiles:
     #active: online
     #active: dev
