@@ -5,7 +5,7 @@ spring:
     name: springcloud-hystrix-dashboard
 
 server:
-  port: 3990
+  port: 7999
 
 eureka:
   client:
