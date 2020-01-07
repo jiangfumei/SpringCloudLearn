@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerExchangeFilterFunction;
+import org.springframework.cloud.client.loadbalancer.reactive.ReactorLoadBalancerExchangeFilterFunction;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,21 +54,31 @@ public class ZipkinApplication {
     }*/
 
 
-    private LoadBalancerExchangeFilterFunction lbFunction;
+    /*private LoadBalancerExchangeFilterFunction lbFunction;*/
+    @Resource
+    WebClient webClient;
 
 
-    public WebClient webClient() {
-        return WebClient.builder().baseUrl("http://service-myya")
+/*    private final WebClient.Builder loadBalancedWebClientBuilder;
+    private final ReactorLoadBalancerExchangeFilterFunction lbFunction;
+
+    public ZipkinApplication(WebClient.Builder webClientBuilder,
+                           ReactorLoadBalancerExchangeFilterFunction lbFunction) {
+        this.loadBalancedWebClientBuilder = webClientBuilder;
+        this.lbFunction = lbFunction;
+    }*/
+    /*public WebClient webClient() {
+        return webClient..baseUrl("http://service-myya")
                 .filter(lbFunction)
                 .build();
-    }
+    }*/
 
     @GetMapping("/trace-a")
     public Mono<String> trace() {
         System.out.println("===call trace-a===");
 
-        return webClient().get()
-                .uri("/trace-b")
+        return webClient.get()
+                .uri("http://service-myya/trace-b")
                 .retrieve()
                 .bodyToMono(String.class);
     }
