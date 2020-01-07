@@ -1,0 +1,8 @@
+server:
+  port: 2525
+
+spring:
+  application:
+    name: cloud-gateway
+
+
