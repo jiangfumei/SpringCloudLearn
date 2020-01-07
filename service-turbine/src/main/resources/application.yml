@@ -19,7 +19,7 @@ management:
         allowed-methods: "*"
 
 turbine:
-  app-config: consumer,feign
+  app-config: consumer-ribbon,consumer-feign
   aggregator:
     clusterConfig: default
   clusterNameExpression: new String("default")
