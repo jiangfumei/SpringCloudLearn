@@ -1,21 +1,15 @@
 package com.zipkin.servicemyya;
 
-import brave.sampler.Sampler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import reactor.core.publisher.Mono;
 
 @SpringBootApplication
 @RestController
-public class ServiceMyyaApplication {
+public class TraceApplication {
 
-    public Logger Log = LoggerFactory.getLogger(ServiceMyyaApplication.class);
+/*    public Logger Log = LoggerFactory.getLogger(ServiceMyyaApplication.class);
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceMyyaApplication.class, args);
@@ -45,7 +39,13 @@ public class ServiceMyyaApplication {
     @Bean
     public Sampler defaultSampler() {
         return Sampler.ALWAYS_SAMPLE;
+    }*/
+
+
+    @GetMapping("/trace-b")
+    public Mono<String> trace() {
+        System.out.println("===call trace-b===");
+
+        return Mono.just("Trace");
     }
-
-
 }
