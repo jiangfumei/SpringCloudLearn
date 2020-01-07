@@ -19,12 +19,12 @@ spring:
           default-label: master
 
 server:
-  port: 3990
+  port: 3980
 
 eureka:
   client:
-    register-with-eureka: true  #注册到Eureka的注册中心
-    fetch-registry: true  #获取注册实例列表
+    #register-with-eureka: true  #注册到Eureka的注册中心
+    #fetch-registry: true  #获取注册实例列表
     serviceUrl:
       defaultZone: http://localhost:9990/eureka/
   instance:

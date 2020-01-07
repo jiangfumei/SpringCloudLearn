@@ -12,7 +12,6 @@ spring:
     config:
       label: master
       profile: dev
-      uri: http://localhost:3990/
       bus:
         enabled: true
         trace:
