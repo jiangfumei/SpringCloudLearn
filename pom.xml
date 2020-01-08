@@ -82,5 +82,10 @@
 		<module>consumer</module>	    <!--ribbon消费者 -->
 		<module>feign</module>		    <!--feign消费者-->
 		<module>config-client</module>  <!--微服务的配置中心模块config-client-->
+		<module>hystrix</module>		<!--断容器看板-->
+		<module>service-turbine</module><!--这个系统的Hystrix Dashboard数据就需要用到Hystrix Turbine。Hystrix Turbine将每个服务Hystrix Dashboard数据进行了整合-->
+		<module>zuul</module>			<!--路由网关-->
+		<module>service-myya</module>
+		<module>zipkin</module>			<!--Spring Cloud Sleuth服务链追踪--><!--模块：service-myya zipkin-->
 	</modules>
 </project>
